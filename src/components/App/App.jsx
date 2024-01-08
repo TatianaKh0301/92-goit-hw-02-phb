@@ -39,11 +39,10 @@ export class App extends Component {
 
 
     render() { 
-
-    return (
-        <AppWrapper>
-            <FormAddContacts onSubmit={this.addContacts} />
-        </AppWrapper>
-    );
-  }  
+         return (
+                <AppWrapper>
+                    <FormAddContacts onSubmit={this.addContacts} />
+                </AppWrapper>
+        );
+    }  
 };
