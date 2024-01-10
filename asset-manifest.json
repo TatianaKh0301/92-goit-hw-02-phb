@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/92-goit-hw-02-phb/static/css/main.7acaea2f.css",
-    "main.js": "/92-goit-hw-02-phb/static/js/main.f3d65909.js",
+    "main.js": "/92-goit-hw-02-phb/static/js/main.3e57800b.js",
+    "static/media/phonebook.jpg": "/92-goit-hw-02-phb/static/media/phonebook.d4641259dbd46141b53f.jpg",
     "index.html": "/92-goit-hw-02-phb/index.html",
     "main.7acaea2f.css.map": "/92-goit-hw-02-phb/static/css/main.7acaea2f.css.map",
-    "main.f3d65909.js.map": "/92-goit-hw-02-phb/static/js/main.f3d65909.js.map"
+    "main.3e57800b.js.map": "/92-goit-hw-02-phb/static/js/main.3e57800b.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.f3d65909.js"
+    "static/js/main.3e57800b.js"
   ]
 }
