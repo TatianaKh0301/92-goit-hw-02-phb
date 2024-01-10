@@ -25,7 +25,7 @@ export const FormAddContacts = ({onSubmit}) => {
     }
     return(
         <Formik initialValues={initialValues} schema={validationSchema} onSubmit={handleSubmit} >
-            <FormWrapper autocomplete="off">
+            <FormWrapper autoComplete="off">
                 <MainTitle>Phone book</MainTitle>
                 <LabelForm htmlFor={nameInputId}>Name
                     <InputForm 
@@ -35,7 +35,7 @@ export const FormAddContacts = ({onSubmit}) => {
                     />
                     <ErrorMessage name="name"/>
                 </LabelForm>
-                <LabelForm htmlFor={numberInputId}>
+                <LabelForm htmlFor={numberInputId}>Number
                     <InputForm 
                         type="tel"
                         name="number"
