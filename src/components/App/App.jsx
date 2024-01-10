@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import shortid from "shortid";
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import { AppWrapper } from "./App.styled";
 import { FormAddContacts } from "components/FormAddContacts";
+import { ContactList } from "components/ContactList/ContactList";
 
 
 export class App extends Component {
@@ -35,13 +36,35 @@ export class App extends Component {
                 {contacts: [contact, ...contacts]}
             ));
         }
-    }
+    };
+
+    changeFilter = event => {
+        this.setState({filter: event.currentTarget.value});
+    };
+
+    getVisibleContacts = () => {
+        const {filter, contacts} = this.state;
+        const normalizedFilter = filter.toLocaleLowerCase();
+        return contacts.filter(contact => 
+            contact.name.toLowerCase().includes(normalizedFilter)
+        );
+    };
+
+    deleteContact = (contactId) => {
+        this.setState(prevState => ({
+            contacts: prevState.contacts.filter(contact => contact.id !== contactId ),
+        }));
+    };
 
 
     render() { 
+        const visibleContacts = this.getVisibleContacts();
          return (
                 <AppWrapper>
                     <FormAddContacts onSubmit={this.addContacts} />
+                    <Toaster />
+                    <ContactList contacts={visibleContacts} onDeleteContact={this.deleteContact}/>
+
                 </AppWrapper>
         );
     }  
